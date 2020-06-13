@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertViewController" customModule="LoginDemoApp" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="Hz2-QW-ga4" id="89c-mP-7h8"/>
+                <outlet property="cancelButton" destination="Awc-Kx-LSM" id="9hy-ws-2Jg"/>
+                <outlet property="parentViews" destination="iN0-l3-epB" id="i9p-Bb-pVy"/>
+                <outlet property="signUpButton" destination="pHX-WE-3F8" id="rvH-aO-ceK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="436" height="685"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PK3-XG-UCq">
+                    <rect key="frame" x="0.0" y="0.0" width="436" height="685"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-QW-ga4">
+                            <rect key="frame" x="20" y="253" width="396" height="179"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awc-Kx-LSM">
+                                    <rect key="frame" x="358" y="8" width="30" height="30"/>
+                                    <state key="normal" title="❌"/>
+                                    <connections>
+                                        <action selector="alertCancel:" destination="-1" eventType="touchUpInside" id="dg6-cj-kCq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHX-WE-3F8">
+                                    <rect key="frame" x="44" y="133" width="309" height="32"/>
+                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <state key="normal" title="Log In / Sign Up"/>
+                                    <connections>
+                                        <action selector="alertSignUpButton:" destination="-1" eventType="touchUpInside" id="1lf-is-Fj6"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="179" id="44o-lP-be4"/>
+                                <constraint firstItem="pHX-WE-3F8" firstAttribute="leading" secondItem="Hz2-QW-ga4" secondAttribute="leading" constant="44" id="N9G-x8-bgJ"/>
+                                <constraint firstAttribute="trailing" secondItem="Awc-Kx-LSM" secondAttribute="trailing" constant="8" id="VGe-ee-u5O"/>
+                                <constraint firstAttribute="trailing" secondItem="pHX-WE-3F8" secondAttribute="trailing" constant="43" id="kdw-lC-K8J"/>
+                                <constraint firstItem="Awc-Kx-LSM" firstAttribute="top" secondItem="Hz2-QW-ga4" secondAttribute="top" constant="8" id="rTw-DM-OE3"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click below to Log In or Sign Up!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BV6-Yp-Yef">
+                            <rect key="frame" x="91.5" y="332" width="253" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.75198063380281688" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="BV6-Yp-Yef" firstAttribute="centerX" secondItem="Hz2-QW-ga4" secondAttribute="centerX" id="ANc-nl-tyh"/>
+                        <constraint firstItem="BV6-Yp-Yef" firstAttribute="top" secondItem="Hz2-QW-ga4" secondAttribute="bottom" constant="-100" id="HIq-7J-uBL"/>
+                        <constraint firstItem="Hz2-QW-ga4" firstAttribute="centerX" secondItem="PK3-XG-UCq" secondAttribute="centerX" id="MO3-yV-VCR"/>
+                        <constraint firstItem="pHX-WE-3F8" firstAttribute="top" secondItem="BV6-Yp-Yef" secondAttribute="bottom" constant="33" id="U2I-VN-K1W"/>
+                        <constraint firstItem="Hz2-QW-ga4" firstAttribute="leading" secondItem="PK3-XG-UCq" secondAttribute="leading" constant="20" id="bLU-TN-HRA"/>
+                        <constraint firstAttribute="trailing" secondItem="Hz2-QW-ga4" secondAttribute="trailing" constant="20" id="kKP-lS-Q8I"/>
+                        <constraint firstItem="Hz2-QW-ga4" firstAttribute="centerY" secondItem="PK3-XG-UCq" secondAttribute="centerY" id="ueQ-nJ-AhM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="PK3-XG-UCq" secondAttribute="bottom" id="A5C-cJ-Iit"/>
+                <constraint firstItem="PK3-XG-UCq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YgO-zM-VXK"/>
+                <constraint firstAttribute="trailing" secondItem="PK3-XG-UCq" secondAttribute="trailing" id="bHb-kb-OI8"/>
+                <constraint firstItem="PK3-XG-UCq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fkY-Qf-Fwx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="156.52173913043478" y="40.513392857142854"/>
+        </view>
+    </objects>
+</document>
